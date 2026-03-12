@@ -1156,7 +1156,7 @@ Let me first look at what a real output JSON looks like to understand the actual
 
 ---
 
-_**User (2026-03-12 15:37Z)**_
+_**User (2026-03-12 15:51Z)**_
 
 @agent Try Again
 
@@ -1169,7 +1169,49 @@ Now I see the real problem — **48 concepts** and **46 edges** with labels like
 1. Use **Graphviz `dot` layout** (hierarchical top-to-bottom) for best DAG readability, with `kamada_kawai` as fallback
 2. **Scale spacing** based on node count
 3. Simpler, cleaner, professional design (white background, muted boxes, no glow effects)
-4. Proper text wrapping and box sizing 
+4. Proper text wrapping and box sizing Good — graphviz binary is installed, just need pydot. Let me install it: Now I have `dot` working for proper hierarchical layouts. Let me rewrite the entire file — clean, professional, no-overlap: 
+```
+
+```
+That's just Pylance's interpreter mismatch — not a real error. Now let me test against the real 48-node JSON: 1.3 MB PNG — good image size for a 48-node graph. Now let me also re-render the official output so `video_1_dag.png` uses the new style: Let me verify the final file is clean: Clean. Here's what changed and why:
+
+---
+
+### Key changes
+
+**Layout engine — `spring_layout` → Graphviz `dot`**  
+The old `planar_layout` / `spring_layout` can't handle 48 nodes without massive overlap. Graphviz `dot` is purpose-built for hierarchical DAG layout — it computes proper layer assignments and minimises edge crossings. Falls back to `kamada_kawai` → `spring_layout` if Graphviz/pydot isn't installed.
+
+**No-overlap node rendering — manual `FancyBboxPatch` → matplotlib's `bbox` on `ax.text()`**  
+The old approach measured text bounding boxes with `get_window_extent()` and drew separate `FancyBboxPatch` rectangles — fragile and still overlapped because the layout didn't know about box sizes. The new approach uses `ax.text(..., bbox=dict(boxstyle="round,..."))` which lets matplotlib auto-size a rounded rectangle around each label. Combined with `dot` layout's proper spacing, text never leaks outside its box.
+
+**Dynamic figure size**  
+Width and height scale with `n` (node count): `max(16, min(36, n*0.7))` × `max(10, min(48, n*0.55))`. A 48-node graph gets a ~33×26 inch canvas; a 10-node graph stays at 16×10.
+
+**Arrow shrinking**  
+`shrinkA=15, shrinkB=15` pulls arrow start/end points away from node centres so arrows terminate cleanly at box edges instead of hiding under them.
+
+**Professional colour scheme**  
+White background, light-blue box fill (`#EFF6FF`), blue border (`#3B82F6`), dark slate text (`#1E293B`). Removed glow effects, dark canvas, and multi-colour palette — the result is clean and presentation-ready.
+
+**Dependency added: `pydot`**  
+Installed `pydot` (37 KB wheel) to bridge `networkx` → system `graphviz`. The `dot` binary was already present at `dot`.
+
+---
+
+_**User (2026-03-12 16:41Z)**_
+
+Add an if condition so that if I want to run the code and get transcript for only one video I can do it and won't have to wait for the code to run five times 
+make the same changes in ingest.py and transcript.py and whereever necessaery
+
+---
+
+_**Assistant (copilot/claude-sonnet-4.6)**_
+
+Let me read the current state of all relevant files first. Now I have a clear picture. The changes needed are:
+
+1. **Notebook** — add a `SINGLE_VIDEO_URL` variable with an `if/else` toggle so one variable controls whether to run 1 or all 5
+2. **`main.py`** — add a `--url` CLI argument 
 
 ---
 
