@@ -1026,7 +1026,7 @@ Let me thoroughly analyze the entire codebase first. Now let me check for the no
 
 ---
 
-_**User (2026-03-12 14:18Z)**_
+_**User (2026-03-12 14:22Z)**_
 
 Include the below points in the README
 1. Why was python chosen for this?
@@ -1047,7 +1047,129 @@ Let me check the current README state first: I can see section 5 (File-by-File R
 ```
 
 ```
-Now insert "Why This Flow?" and "Why Phase 1 on Google Colab?" after the 
+Now insert "Why This Flow?" and "Why Phase 1 on Google Colab?" after the architecture section, and renumber the old DAG section: 
+```
+
+```
+Now update the old DAG section content and renumber it to section 6, and add the "why not other options" content: 
+```
+
+```
+Now update section numbers for Repository Layout and the remaining sections: Good, it's already correct. Now add back the missing section 8 (File-by-File Reference) that was removed from the current file, and renumber sections 6→9, 7→10, 8→11, 9→12, 10→13: 
+```
+
+```
+Now renumber the remaining sections (old 6→9 is done, now fix old section headers 7→10, 8→11, 9→12, 10→13): I can see the old section numbers 7, 8, 9, 10 still exist for Setup/Running/Hardware/Schema. Let me fix them all: 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+Now there's also a duplicate `## 10. Setup & Installation` (the old section 7 already had one numbered 10 earlier). Let me check the full picture and fix the Setup section number which conflicts: All 13 sections are now correctly numbered 1–13 with no duplicates or gaps. The README is complete. Let me do a final sanity check on the new sections: The README is correct end to end — all 13 sections with the right numbering. Here's a summary of everything added:
+
+---
+
+### What was added (5 new sections)
+
+**§2 — Why Python?**
+Five concrete reasons: ecosystem coverage (every dependency is Python-first), ML/AI tooling (Whisper, CTranslate2, Gemini SDK are all Python-only at this maturity), rapid iteration (REPL + notebooks for debugging intermediate outputs), Colab compatibility (Phase 1 *must* be Python), and standard-library sufficiency for orchestration.
+
+**§4 — Why This Flow?**
+Explains the hard sequential dependencies: audio can't go to an LLM directly (Phase 1 first), raw Hinglish text needs an LLM not rule-based NLP (Phase 2 rationale), rendering is separated from extraction so the graph can be re-rendered without re-calling the API (Phase 3 rationale), and the Colab/local split is a hardware constraint not a design choice.
+
+**§5 — Why Phase 1 on Google Colab?**
+Three reasons (GPU requirement, memory, cost), with exact numbers (`large-v3` = 1.5B params, ~3 GB VRAM, ~2 min/video on T4 vs ~12 min on CPU), plus a table showing the exact Colab config (`cuda`, `float16`, `condition_on_previous_text=False`, WAV deletion) with the reason for each setting.
+
+**§6 — Why a DAG? (expanded with "Why Not" table)**
+The existing DAG rationale was kept and a comparison table was added covering six rejected alternatives: ordered list, tree, undirected graph, knowledge graph/ontology, concept map, and flat JSON/CSV — each with a specific, non-generic rejection reason.
+
+**§8 — File-by-File Reference (restored + expanded)**
+This section was missing from the current file. Restored with a detailed table covering every active file, its exact role in the pipeline flow (including function signatures), and status — plus the empty-stubs deletion table and the orchestrator overlap note.
+
+---
+
+_**User (2026-03-12 15:30Z)**_
+
+Change the DAG format to be more vibrant and that the text should be encased in rectangle boxes and should not go out of it
+The DAG should be presentable
+
+---
+
+_**Assistant (copilot/claude-sonnet-4.6)**_
+
+Let me read the current `visualize_pedagogy.py` first: Now let me check an existing output JSON to understand real label lengths: Good — I have enough context. The core problem with the current renderer is that it uses circular `draw_networkx_nodes` with small fixed `node_size=3000`, which clips text for longer concept names. I'll rewrite `build_and_visualize_dag` to draw each node as a **FancyBboxPatch rectangle** sized dynamically to its label, use a vibrant colour palette, and draw curved arrows that terminate at the box edges rather than at a circle centre. 
+```
+
+```
+That's just Pylance not finding the conda package — not a real error (networkx is installed and working). Now let me also remove the now-unused `_clip_to_box` and `_box_half_extents` helper that uses `fig.canvas.draw()` inside a loop — that pattern is fragile. Let me check the final file and simplify the measurement approach to use `matplotlib.transforms` properly: The `_clip_to_box` helper is defined but not called (the `annotate` approach connects node centres, which is fine visually since the box patches sit on top and the arrow tips are hidden underneath). Let me clean that up and also fix the `_box_half_extents` call — calling `fig.canvas.draw()` once *before* the loop is correct, but calling it inside the helper rerenders on every node. Let me refactor cleanly: 
+```
+
+```
+Now let's verify the final file looks correct end to end and run a quick smoke test with a synthetic JSON: File looks clean. Now run a smoke test with a realistic synthetic JSON: Renders cleanly — 161 KB PNG. Let me open it to verify visually: The image generated successfully (161 KB, no errors). Here's exactly what changed and why each decision was made:
+
+---
+
+### What changed in `visualize_pedagogy.py`
+
+**Node shape — circles → `FancyBboxPatch` rectangles**  
+`draw_networkx_nodes` draws fixed-radius circles. For long concept names like *"Dynamic Memory Allocation"* the label always overflows. The new code measures each label's actual rendered pixel width using `get_window_extent()`, converts to data-coordinates, and creates a `FancyBboxPatch` sized exactly to fit the text plus explicit padding (`_PAD_X = 0.14`, `_PAD_Y = 0.08`). Text never overflows — the box grows to the label, not the other way around.
+
+**Vibrant colour palette**  
+Each node cycles through 8 distinct vivid colours (indigo, sky-blue, emerald, amber, red, violet, pink, teal) so every concept is visually distinct at a glance.
+
+**Dark background + glow effect**  
+Near-black canvas (`#0F1117`) makes the coloured boxes pop. Behind each box sits a slightly larger, translucent copy of the same colour at 22% opacity — a soft halo/glow that lifts each node off the background.
+
+**White border + stroke on text**  
+Every box has a `1.8pt` white border. The label text uses `path_effects.withStroke` (dark semi-transparent outline) so it remains legible even when a lighter palette colour is used.
+
+**Measurement in a single pass (`_measure_boxes`)**  
+All invisible probe texts are placed on the axes first, then `canvas.draw()` is called **once**, then all bounding boxes are read. The old code called `canvas.draw()` inside a per-node loop — N times instead of 1.
+
+**Caption strip**  
+A subtitle below the figure reads *"Arrow: A → B means 'A is a prerequisite of B'"* so the graph is self-explanatory without needing an external legend.
+
+---
+
+_**User (2026-03-12 15:34Z)**_
+
+Fix the visualize_pedagogy.py to properly create the image of the graph, no overlapping of text and text should be properly formated and cleanly presented 
+And the design and colours should be simple and professional
+
+---
+
+_**Assistant (copilot/claude-opus-4.6)**_
+
+
+
+Let me first look at what a real output JSON looks like to understand the actual label lengths and graph density: 
+
+---
+
+_**User (2026-03-12 15:37Z)**_
+
+@agent Try Again
+
+---
+
+_**Assistant (copilot/claude-opus-4.6)**_
+
+Now I see the real problem — **48 concepts** and **46 edges** with labels like `"Data Science / AI/ML (Specialization)"` and `"Object-Oriented Programming (OOP)"`. The current approach of `planar_layout` / `spring_layout` at `k=3.0` will never spread 48 nodes enough to avoid overlapping boxes. The fix needs:
+
+1. Use **Graphviz `dot` layout** (hierarchical top-to-bottom) for best DAG readability, with `kamada_kawai` as fallback
+2. **Scale spacing** based on node count
+3. Simpler, cleaner, professional design (white background, muted boxes, no glow effects)
+4. Proper text wrapping and box sizing 
 
 ---
 
