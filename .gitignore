@@ -3,7 +3,8 @@ venv/
 env/
 .env
 
-.specstory/
+.specstory
+
 # Python Cache
 __pycache__/
 *.pyc
@@ -11,7 +12,3 @@ __pycache__/
 
 # Data and Media (Ignore heavy files, but keep the folder structure)
 data/audio/*
-data/input_transcripts/*
-!data/input_transcripts/.gitkeep
-data/output_graphs/*
-!data/output_graphs/.gitkeep

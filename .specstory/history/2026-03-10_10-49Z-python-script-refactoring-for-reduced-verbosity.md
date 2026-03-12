@@ -1199,7 +1199,7 @@ Installed `pydot` (37 KB wheel) to bridge `networkx` → system `graphviz`. The 
 
 ---
 
-_**User (2026-03-12 16:41Z)**_
+_**User (2026-03-12 16:45Z)**_
 
 Add an if condition so that if I want to run the code and get transcript for only one video I can do it and won't have to wait for the code to run five times 
 make the same changes in ingest.py and transcript.py and whereever necessaery
@@ -1211,7 +1211,61 @@ _**Assistant (copilot/claude-sonnet-4.6)**_
 Let me read the current state of all relevant files first. Now I have a clear picture. The changes needed are:
 
 1. **Notebook** — add a `SINGLE_VIDEO_URL` variable with an `if/else` toggle so one variable controls whether to run 1 or all 5
-2. **`main.py`** — add a `--url` CLI argument 
+2. **`main.py`** — add a `--url` CLI argument so you can run `python `main.py` --url <url>` for a single video, defaulting to all 5 if omitted
+3. **`ingest.py` / `transcribe.py`** — their function signatures are already single-video by design; no changes needed there
+
+Let me make all the changes: Now update Cell 2 (the main processing cell) to use `VIDEO_URLS` from the config cell instead of redefining it: Now update `main.py` to accept an optional `--url` argument: 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+`ingest.py` and `transcribe.py` are already single-video by design — their functions take one URL/path at a time, so no changes are needed. Let me do a final check of `main.py` to make sure it's clean: Everything looks correct. Here's a summary of every change made:
+
+---
+
+### Changes made
+
+#### Notebook — cells 3 & 4 (new) + cell 2 (updated)
+
+**New cell 3 — Configuration:**
+```python
+SINGLE_VIDEO_URL = None   # ← change this to a URL to run just one video
+```
+Setting `SINGLE_VIDEO_URL` to a URL processes only that video. Leaving it as `None` processes all five. The cell prints which URLs will be processed so you can confirm before running the heavy cell.
+
+**Cell 2 (main loop) — updated:**  
+Removed the hardcoded `VIDEO_URLS` list — it now comes from the config cell. Also added a `_stem_for()` helper so a custom URL (not in the original 5) gets a clean filename from its YouTube video ID rather than crashing.
+
+---
+
+#### `main.py` — `--url` CLI argument
+
+```bash
+# Process all five (default behaviour — unchanged)
+python main.py
+
+# Process only one
+python main.py --url "https://youtu.be/XV-lIaO00H8"
+```
+
+`argparse` resolves `urls_to_run = [args.url]` if `--url` is given, otherwise falls back to the full `YOUTUBE_URLS` list. The progress counter and summary now say "video(s)" and use the correct total.
+
+---
+
+#### `ingest.py` / `transcribe.py` — no changes needed
+
+Both functions (`download_audio`, `transcribe_audio`) already operate on a **single URL/path** — they were never batch functions. The loop lives in `main.py`, which is the right place to control it.
 
 ---
 

@@ -1,0 +1,277 @@
+{
+    "concepts": [
+        "Python Programming Language",
+        "Python Fundamentals",
+        "Python Syntax",
+        "Debugging",
+        "Project Building (General)",
+        "Python Data Structures (Lists, Tuples, Sets, Dictionaries)",
+        "File Handling (Python)",
+        "Object-Oriented Programming (OOP) Concepts",
+        "Classes and Objects (OOP)",
+        "Polymorphism (OOP)",
+        "Abstraction (OOP)",
+        "Encapsulation (OOP)",
+        "Inheritance (OOP)",
+        "Decorators (Python)",
+        "Iterators (Python)",
+        "Constructors (Python)",
+        "Git",
+        "GitHub",
+        "Version Control",
+        "Intermediate Python Concepts",
+        "AI Tools for Programming",
+        "Code Completion",
+        "Code Templates",
+        "Mock Interview Practice (with AI)",
+        "Specialization (Python)",
+        "Web Development with Python Frameworks",
+        "FastAPI Framework",
+        "Flask Framework",
+        "Django Framework",
+        "Data Science and AI/ML with Python Libraries",
+        "NumPy Library",
+        "Pandas Library",
+        "Matplotlib Library",
+        "Seaborn Library",
+        "Scikit-learn Library",
+        "PyTorch Library",
+        "TensorFlow Library",
+        "Keras Library",
+        "Project Building (Advanced & Deployment)",
+        "Code Deployment",
+        "Resume Preparation"
+    ],
+    "translations": [
+        {
+            "original_term": "ABCD of Python",
+            "standardized_term": "Python Fundamentals"
+        },
+        {
+            "original_term": "chote-chote codes",
+            "standardized_term": "small code snippets"
+        },
+        {
+            "original_term": "dimag mein chapne wala hai",
+            "standardized_term": "internalized"
+        },
+        {
+            "original_term": "ghabrana nahi hai",
+            "standardized_term": "do not be intimidated"
+        },
+        {
+            "original_term": "solid base",
+            "standardized_term": "strong foundation"
+        },
+        {
+            "original_term": "GitHub ke upar push",
+            "standardized_term": "push to GitHub"
+        },
+        {
+            "original_term": "full fledged projects",
+            "standardized_term": "comprehensive projects"
+        },
+        {
+            "original_term": "initial stages ke andar bilkul bhi AI tools ko use nahi karna hai",
+            "standardized_term": "refrain from using AI tools in initial stages"
+        },
+        {
+            "original_term": "100% vibe coding ke thoon",
+            "standardized_term": "relying solely on AI for coding"
+        },
+        {
+            "original_term": "aade se ek ghante ki kuch na kuch padhai",
+            "standardized_term": "half to one hour of dedicated study/practice"
+        },
+        {
+            "original_term": "HCF ka program likh diya, sum ka, product ka, average calculate karne ka program likh diya, apna naam print karne ka program likh diya, koi basic sa user input, user output type program bana diya",
+            "standardized_term": "Basic Programming Exercises"
+        }
+    ],
+    "dependencies": [
+        {
+            "source": "Python Programming Language",
+            "target": "Python Fundamentals"
+        },
+        {
+            "source": "Python Fundamentals",
+            "target": "Python Syntax"
+        },
+        {
+            "source": "Python Syntax",
+            "target": "Debugging"
+        },
+        {
+            "source": "Python Syntax",
+            "target": "Project Building (General)"
+        },
+        {
+            "source": "Python Fundamentals",
+            "target": "Python Data Structures (Lists, Tuples, Sets, Dictionaries)"
+        },
+        {
+            "source": "Python Fundamentals",
+            "target": "File Handling (Python)"
+        },
+        {
+            "source": "Python Fundamentals",
+            "target": "Object-Oriented Programming (OOP) Concepts"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Classes and Objects (OOP)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Polymorphism (OOP)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Abstraction (OOP)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Encapsulation (OOP)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Inheritance (OOP)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Decorators (Python)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Iterators (Python)"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Constructors (Python)"
+        },
+        {
+            "source": "Python Fundamentals",
+            "target": "Git"
+        },
+        {
+            "source": "Git",
+            "target": "GitHub"
+        },
+        {
+            "source": "Git",
+            "target": "Version Control"
+        },
+        {
+            "source": "GitHub",
+            "target": "Project Building (General)"
+        },
+        {
+            "source": "Python Fundamentals",
+            "target": "Intermediate Python Concepts"
+        },
+        {
+            "source": "Python Data Structures (Lists, Tuples, Sets, Dictionaries)",
+            "target": "Intermediate Python Concepts"
+        },
+        {
+            "source": "File Handling (Python)",
+            "target": "Intermediate Python Concepts"
+        },
+        {
+            "source": "Object-Oriented Programming (OOP) Concepts",
+            "target": "Intermediate Python Concepts"
+        },
+        {
+            "source": "Git",
+            "target": "Intermediate Python Concepts"
+        },
+        {
+            "source": "Intermediate Python Concepts",
+            "target": "AI Tools for Programming"
+        },
+        {
+            "source": "AI Tools for Programming",
+            "target": "Code Completion"
+        },
+        {
+            "source": "AI Tools for Programming",
+            "target": "Code Templates"
+        },
+        {
+            "source": "AI Tools for Programming",
+            "target": "Mock Interview Practice (with AI)"
+        },
+        {
+            "source": "Intermediate Python Concepts",
+            "target": "Specialization (Python)"
+        },
+        {
+            "source": "Specialization (Python)",
+            "target": "Web Development with Python Frameworks"
+        },
+        {
+            "source": "Specialization (Python)",
+            "target": "Data Science and AI/ML with Python Libraries"
+        },
+        {
+            "source": "Web Development with Python Frameworks",
+            "target": "FastAPI Framework"
+        },
+        {
+            "source": "Web Development with Python Frameworks",
+            "target": "Flask Framework"
+        },
+        {
+            "source": "Web Development with Python Frameworks",
+            "target": "Django Framework"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "NumPy Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "Pandas Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "Matplotlib Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "Seaborn Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "Scikit-learn Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "PyTorch Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "TensorFlow Library"
+        },
+        {
+            "source": "Data Science and AI/ML with Python Libraries",
+            "target": "Keras Library"
+        },
+        {
+            "source": "Project Building (General)",
+            "target": "Project Building (Advanced & Deployment)"
+        },
+        {
+            "source": "Project Building (Advanced & Deployment)",
+            "target": "Code Deployment"
+        },
+        {
+            "source": "Project Building (Advanced & Deployment)",
+            "target": "Resume Preparation"
+        },
+        {
+            "source": "GitHub",
+            "target": "Resume Preparation"
+        }
+    ]
+}

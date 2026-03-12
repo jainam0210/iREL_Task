@@ -1,0 +1,125 @@
+{
+    "concepts": [
+        "Deadlock",
+        "Processes",
+        "Resources",
+        "Semaphores",
+        "Necessary Conditions for Deadlock",
+        "Mutual Exclusion",
+        "No Preemption",
+        "Hold and Wait",
+        "Circular Wait"
+    ],
+    "translations": [
+        {
+            "original_term": "\u0905\u0917\u0930 \u090f\u0915 simple \u0938\u0947 example \u0938\u0947 \u0938\u092e\u091d\u093e \u091c\u093e\u090f",
+            "standardized_term": "To understand with a simple example"
+        },
+        {
+            "original_term": "bank personal",
+            "standardized_term": "bank personnel"
+        },
+        {
+            "original_term": "stuck \u0939\u094b \u0917\u090f",
+            "standardized_term": "stuck"
+        },
+        {
+            "original_term": "stuck \u0939\u094b \u0915\u0947 \u0930\u0939\u0947 \u0917\u090f",
+            "standardized_term": "remained stuck"
+        },
+        {
+            "original_term": "technical way \u0938\u0947 \u092c\u093e\u0924 \u0915\u0930\u0947\u0902",
+            "standardized_term": "If we talk technically"
+        },
+        {
+            "original_term": "synchronization \u092e\u0947\u0902",
+            "standardized_term": "in synchronization"
+        },
+        {
+            "original_term": "down \u0915\u0930 \u0926\u093f\u092f\u093e",
+            "standardized_term": "acquired"
+        },
+        {
+            "original_term": "\u0915\u094c\u0928 \u0932\u0947\u0915\u0947 \u092c\u0948\u0920\u093e \u0939\u0948?",
+            "standardized_term": "who is holding?"
+        },
+        {
+            "original_term": "\u092f\u0947 \u091a\u093e\u0930\u094b\u0902 conditions \u091c\u094b \u0939\u0948\u0902 \u092c\u0939\u0941\u0924 important \u0939\u0948\u0902",
+            "standardized_term": "These four conditions are very important"
+        },
+        {
+            "original_term": "priority \u0935\u093e\u0932\u093e system",
+            "standardized_term": "priority system"
+        },
+        {
+            "original_term": "high priority \u0906\u092f\u093e \u0924\u094b low priority \u0935\u093e\u0932\u093e",
+            "standardized_term": "if a high priority process arrives, the low priority one"
+        },
+        {
+            "original_term": "switching \u0935\u0939\u093e\u0901 \u092a\u0947 \u0928\u0939\u0940\u0902 \u0939\u094b\u0917\u0940",
+            "standardized_term": "switching will not occur"
+        },
+        {
+            "original_term": "\u090f\u0915 resource \u092f\u0939 \u0926\u094b resources",
+            "standardized_term": "one or two resources"
+        },
+        {
+            "original_term": "\u091c\u093f\u0924\u0928\u0947 \u092d\u0940 P1 \u0932\u0947\u0915\u0947 \u092c\u0948\u0920\u093e \u0939\u0948",
+            "standardized_term": "whatever P1 is holding"
+        },
+        {
+            "original_term": "loop \u0906 \u0917\u092f\u093e",
+            "standardized_term": "a loop has formed"
+        },
+        {
+            "original_term": "\u0939\u094b \u0938\u0915\u0924\u0940 \u0939\u0948",
+            "standardized_term": "can occur"
+        },
+        {
+            "original_term": "resource \u0915\u0940 \u0924\u0930\u092b \u0939\u092e arrow draw \u0915\u0930\u0924\u0947 \u0939\u0948\u0902",
+            "standardized_term": "we draw an arrow towards the resource"
+        },
+        {
+            "original_term": "P2 R1 \u0915\u0940 request \u0915\u0930 \u0930\u0939\u093e \u0939\u0948 \u0914\u0930 R2 \u0915\u094b hold \u0915\u0930\u0915\u0947 \u092c\u0948\u0920\u093e \u0939\u0948",
+            "standardized_term": "P2 is requesting R1 and holding R2"
+        },
+        {
+            "original_term": "\u0905\u0915\u0947\u0932\u0940 \u090f\u0915 situation \u0928\u0939\u0940\u0902",
+            "standardized_term": "not a single situation alone"
+        }
+    ],
+    "dependencies": [
+        {
+            "source": "Processes",
+            "target": "Deadlock"
+        },
+        {
+            "source": "Resources",
+            "target": "Deadlock"
+        },
+        {
+            "source": "Semaphores",
+            "target": "Deadlock"
+        },
+        {
+            "source": "Mutual Exclusion",
+            "target": "Necessary Conditions for Deadlock"
+        },
+        {
+            "source": "No Preemption",
+            "target": "Necessary Conditions for Deadlock"
+        },
+        {
+            "source": "Hold and Wait",
+            "target": "Necessary Conditions for Deadlock"
+        },
+        {
+            "source": "Circular Wait",
+            "target": "Necessary Conditions for Deadlock"
+        },
+        {
+            "source": "Necessary Conditions for Deadlock",
+            "target": "Deadlock"
+        }
+    ]
+}

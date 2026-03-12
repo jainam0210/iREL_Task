@@ -1,0 +1,161 @@
+{
+    "concepts": [
+        "Arrival Time",
+        "Average Turnaround Time",
+        "Average Waiting Time",
+        "Burst Time",
+        "CPU Idle Time",
+        "CPU execution begins",
+        "Completion Time",
+        "First Come First Serve (FCFS) Scheduling Algorithm",
+        "Gantt Chart",
+        "Non-Preemptive Scheduling",
+        "Process (Operating Systems)",
+        "Process Termination",
+        "Ready Queue",
+        "Response Time",
+        "Scheduling Criteria",
+        "Turnaround Time (TAT)",
+        "Waiting Time (WT)"
+    ],
+    "translations": [
+        {
+            "original_term": "numerical",
+            "standardized_term": "numerical example"
+        },
+        {
+            "original_term": "dimensions",
+            "standardized_term": "units"
+        },
+        {
+            "original_term": "CPU ke upar de diya",
+            "standardized_term": "allocated to CPU"
+        },
+        {
+            "original_term": "execute karna start kiya",
+            "standardized_term": "began execution"
+        },
+        {
+            "original_term": "terminate ho jayega",
+            "standardized_term": "will terminate"
+        },
+        {
+            "original_term": "bina kisi break ke",
+            "standardized_term": "without interruption"
+        },
+        {
+            "original_term": "ready queue mein aa gaya",
+            "standardized_term": "entered ready queue"
+        },
+        {
+            "original_term": "formula kya hota hai",
+            "standardized_term": "the formula is"
+        },
+        {
+            "original_term": "useful time kitna tha",
+            "standardized_term": "required execution time"
+        },
+        {
+            "original_term": "time pe khade hain",
+            "standardized_term": "current simulation time"
+        },
+        {
+            "original_term": "maal lo",
+            "standardized_term": "assume"
+        },
+        {
+            "original_term": "process nikal gaya",
+            "standardized_term": "process completed execution"
+        },
+        {
+            "original_term": "gand chart",
+            "standardized_term": "Gantt Chart"
+        }
+    ],
+    "dependencies": [
+        {
+            "source": "Process (Operating Systems)",
+            "target": "First Come First Serve (FCFS) Scheduling Algorithm"
+        },
+        {
+            "source": "Arrival Time",
+            "target": "First Come First Serve (FCFS) Scheduling Algorithm"
+        },
+        {
+            "source": "Burst Time",
+            "target": "First Come First Serve (FCFS) Scheduling Algorithm"
+        },
+        {
+            "source": "Scheduling Criteria",
+            "target": "First Come First Serve (FCFS) Scheduling Algorithm"
+        },
+        {
+            "source": "Non-Preemptive Scheduling",
+            "target": "First Come First Serve (FCFS) Scheduling Algorithm"
+        },
+        {
+            "source": "First Come First Serve (FCFS) Scheduling Algorithm",
+            "target": "Gantt Chart"
+        },
+        {
+            "source": "Arrival Time",
+            "target": "Gantt Chart"
+        },
+        {
+            "source": "Burst Time",
+            "target": "Gantt Chart"
+        },
+        {
+            "source": "Ready Queue",
+            "target": "Gantt Chart"
+        },
+        {
+            "source": "Gantt Chart",
+            "target": "CPU execution begins"
+        },
+        {
+            "source": "CPU execution begins",
+            "target": "Process Termination"
+        },
+        {
+            "source": "Gantt Chart",
+            "target": "CPU Idle Time"
+        },
+        {
+            "source": "Gantt Chart",
+            "target": "Completion Time"
+        },
+        {
+            "source": "Completion Time",
+            "target": "Turnaround Time (TAT)"
+        },
+        {
+            "source": "Arrival Time",
+            "target": "Turnaround Time (TAT)"
+        },
+        {
+            "source": "Turnaround Time (TAT)",
+            "target": "Waiting Time (WT)"
+        },
+        {
+            "source": "Burst Time",
+            "target": "Waiting Time (WT)"
+        },
+        {
+            "source": "CPU execution begins",
+            "target": "Response Time"
+        },
+        {
+            "source": "Arrival Time",
+            "target": "Response Time"
+        },
+        {
+            "source": "Turnaround Time (TAT)",
+            "target": "Average Turnaround Time"
+        },
+        {
+            "source": "Waiting Time (WT)",
+            "target": "Average Waiting Time"
+        }
+    ]
+}

@@ -1,0 +1,179 @@
+{
+    "concepts": [
+        "Algebraic Structure",
+        "Binary Operation",
+        "Group",
+        "Abelian Group",
+        "Ring",
+        "Closure Property",
+        "Associative Property",
+        "Identity Element",
+        "Inverse Element",
+        "Commutative Property",
+        "Additive Identity Element",
+        "Additive Inverse Element",
+        "Multiplicative Identity Element",
+        "Distributive Law",
+        "Commutative Ring",
+        "Ring with Unity",
+        "Null Ring",
+        "Addition Modulo Operation",
+        "Multiplication Modulo Operation"
+    ],
+    "translations": [
+        {
+            "original_term": "\u092a\u093f\u091b\u0932\u0940 \u0935\u0940\u0921\u093f\u092f\u094b\u0938 \u092e\u0947\u0902",
+            "standardized_term": "previous lectures"
+        },
+        {
+            "original_term": "abillion group",
+            "standardized_term": "Abelian Group"
+        },
+        {
+            "original_term": "closer property",
+            "standardized_term": "Closure Property"
+        },
+        {
+            "original_term": "additive identity",
+            "standardized_term": "Additive Identity Element"
+        },
+        {
+            "original_term": "additive inverse",
+            "standardized_term": "Additive Inverse Element"
+        },
+        {
+            "original_term": "ring with unity \u092f\u093e ring with identity",
+            "standardized_term": "Ring with Unity"
+        },
+        {
+            "original_term": "exams",
+            "standardized_term": "axioms"
+        },
+        {
+            "original_term": "plus \u0914\u0930 multiply",
+            "standardized_term": "addition and multiplication"
+        },
+        {
+            "original_term": "dot modulo",
+            "standardized_term": "Multiplication Modulo Operation"
+        },
+        {
+            "original_term": "addition modulo",
+            "standardized_term": "Addition Modulo Operation"
+        }
+    ],
+    "dependencies": [
+        {
+            "source": "Binary Operation",
+            "target": "Algebraic Structure"
+        },
+        {
+            "source": "Algebraic Structure",
+            "target": "Group"
+        },
+        {
+            "source": "Closure Property",
+            "target": "Group"
+        },
+        {
+            "source": "Associative Property",
+            "target": "Group"
+        },
+        {
+            "source": "Identity Element",
+            "target": "Group"
+        },
+        {
+            "source": "Inverse Element",
+            "target": "Group"
+        },
+        {
+            "source": "Identity Element",
+            "target": "Additive Identity Element"
+        },
+        {
+            "source": "Inverse Element",
+            "target": "Additive Inverse Element"
+        },
+        {
+            "source": "Group",
+            "target": "Abelian Group"
+        },
+        {
+            "source": "Additive Identity Element",
+            "target": "Abelian Group"
+        },
+        {
+            "source": "Additive Inverse Element",
+            "target": "Abelian Group"
+        },
+        {
+            "source": "Commutative Property",
+            "target": "Abelian Group"
+        },
+        {
+            "source": "Algebraic Structure",
+            "target": "Ring"
+        },
+        {
+            "source": "Binary Operation",
+            "target": "Ring"
+        },
+        {
+            "source": "Abelian Group",
+            "target": "Ring"
+        },
+        {
+            "source": "Closure Property",
+            "target": "Ring"
+        },
+        {
+            "source": "Associative Property",
+            "target": "Ring"
+        },
+        {
+            "source": "Distributive Law",
+            "target": "Ring"
+        },
+        {
+            "source": "Ring",
+            "target": "Commutative Ring"
+        },
+        {
+            "source": "Commutative Property",
+            "target": "Commutative Ring"
+        },
+        {
+            "source": "Identity Element",
+            "target": "Multiplicative Identity Element"
+        },
+        {
+            "source": "Multiplicative Identity Element",
+            "target": "Ring with Unity"
+        },
+        {
+            "source": "Ring",
+            "target": "Ring with Unity"
+        },
+        {
+            "source": "Ring",
+            "target": "Null Ring"
+        },
+        {
+            "source": "Binary Operation",
+            "target": "Addition Modulo Operation"
+        },
+        {
+            "source": "Binary Operation",
+            "target": "Multiplication Modulo Operation"
+        },
+        {
+            "source": "Ring",
+            "target": "Addition Modulo Operation"
+        },
+        {
+            "source": "Ring",
+            "target": "Multiplication Modulo Operation"
+        }
+    ]
+}

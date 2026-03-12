@@ -1,0 +1,141 @@
+{
+    "concepts": [
+        "Digital Electronics",
+        "NAND Gate",
+        "Truth Table (NAND Gate)",
+        "NAND Gate Property (One Input Zero)",
+        "Sequential Circuits",
+        "Next State (in Sequential Circuits)",
+        "Present State / Past Output",
+        "SR Latch (NAND Gate Implementation)",
+        "Truth Table (SR Latch)",
+        "Hold State (Memory State)",
+        "Invalid State (Race Condition)",
+        "Flip-Flops",
+        "Counters"
+    ],
+    "translations": [
+        {
+            "original_term": "\u0907\u0938\u0915\u094b cram \u0915\u0930\u0928\u0947 \u0915\u0940",
+            "standardized_term": "To memorize this"
+        },
+        {
+            "original_term": "\u092a\u094b\u0908 \u091c\u093f\u0930\u0942\u0930\u0924 \u0928\u0939\u0940\u0902 \u0939\u0948 cram \u0915\u0930\u0928\u0947 \u0915\u0940",
+            "standardized_term": "No need to memorize"
+        },
+        {
+            "original_term": "basic understanding \u0939\u094b\u0928\u0940 \u092c\u0939\u0941\u0924 \u091c\u093f\u0930\u0942\u0930\u0940 \u0939\u0948",
+            "standardized_term": "A fundamental understanding is crucial"
+        },
+        {
+            "original_term": "past \u092e\u0947\u0902 \u0905\u092d\u0940 \u0905\u092d\u0940 \u092e\u0947\u0930\u0940 already output \u0915\u094d\u092f\u093e \u0925\u0940",
+            "standardized_term": "What was the previous output"
+        },
+        {
+            "original_term": "\u0926\u094b\u0928\u094b\u0902 \u091a\u0940\u091c\u094b\u0902 \u0915\u0947 \u090a\u092a\u0930 \u0921\u093f\u092a\u0947\u0902\u0921 \u0915\u0930\u0924\u0940 \u0939\u0948 \u0924\u092c \u091c\u093e\u0915\u0947 \u092e\u0947\u0930\u0940 next state \u0915\u0940 output \u0906\u0924\u0940 \u0939\u0948",
+            "standardized_term": "Depends on both to determine the next state"
+        },
+        {
+            "original_term": "\u092f\u0947 \u0915\u0939\u093e\u0928\u0940 \u0938\u092e\u091d \u092e\u0947\u0902 \u0906\u0917\u0940 \u0924\u094b flip flow \u0906\u092a\u0915\u094b \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0939\u0940 easy \u0932\u0917\u0947\u0902\u0917\u0947",
+            "standardized_term": "Understanding this will make flip-flops seem simple"
+        },
+        {
+            "original_term": "\u091c\u094b \u092a\u0939\u0932\u0947 \u0925\u0940 \u0905\u092c \u092d\u0940 \u0935\u0939\u0940 \u091a\u0940\u091c \u092e\u0947\u0930\u0940 \u0906 \u0930\u0939\u0940 \u0939\u0948",
+            "standardized_term": "The output remains unchanged from its previous state"
+        },
+        {
+            "original_term": "\u092a\u0939\u0932\u0940 \u0939\u0940 output \u0906\u092a\u0915\u0940 invalid \u0906\u0924\u0940 \u092b\u093f\u0930 \u0906\u092a \u0939\u0940 \u0915\u0939\u0924\u0947 \u0939\u0948\u0902 sir \u092f\u0939 \u0915\u094d\u092f\u093e \u092a\u0939\u0932\u0940 value \u092e\u0947\u0902 0 invalid \u0906 \u0917\u092f\u093e \u0938\u092e\u091d \u092e\u0947\u0902 \u0928\u0939\u0940\u0902 \u0906 \u0930\u0939\u093e",
+            "standardized_term": "If we started with 0,0, the first output would be invalid, leading to confusion"
+        },
+        {
+            "original_term": "SR Latch \u091c\u094b \u0939\u0948 \u0915\u0948\u0938\u0947 \u092c\u0928\u093e\u0924\u0947 \u0939\u0948\u0902 Using NAND Gate",
+            "standardized_term": "How to construct an SR Latch using a NAND Gate"
+        },
+        {
+            "original_term": "SR latch \u092c\u0928\u093e\u092f\u093e \u0925\u093e NAND gate \u0915\u0947 \u0924\u0941\u0930\u0942 \u0907\u0938\u0940 \u0915\u094b \u0939\u092e further extend \u0915\u0930\u0947\u0902\u0917\u0947 flip flops \u092e\u0947\u0902",
+            "standardized_term": "The SR Latch was constructed using a NAND gate; we will further extend this to flip-flops"
+        },
+        {
+            "original_term": "\u0917\u0902\u091f\u0940 \u092c\u091c\u0940 \u0939\u094b\u0917\u0940",
+            "standardized_term": "You might have realized"
+        },
+        {
+            "original_term": "\u0906\u092a\u0915\u0940 \u092e\u0930\u091c\u0940 \u0906\u092a\u0915\u094b \u0915\u0939\u093e\u0928\u0940 \u0938\u092e\u091d \u092e\u0947\u0902 \u0906\u0917\u0940 \u0905\u092c \u0906\u092a \u091c\u0948\u0938\u0947 \u092e\u0930\u091c\u0940 \u091a\u0932\u093e \u0915\u0947 \u0926\u0947\u0916 \u0932\u094b",
+            "standardized_term": "Now that you understand the principle, you can experiment with different inputs"
+        },
+        {
+            "original_term": "\u0938\u092c\u0938\u0947 \u0907\u0902\u092a\u094b\u0930\u094d\u091f\u0947\u0902\u091f \u091a\u0940\u091c \u0906\u092a\u0915\u094b \u092f\u093e\u0926 \u0930\u0916\u0928\u0940 \u0939\u0948",
+            "standardized_term": "Most important point to remember"
+        },
+        {
+            "original_term": "\u0915\u093f\u0938\u0940 \u0905\u091a\u094d\u091b\u0947 level \u092a\u0947 \u091c\u093e\u0924\u0947 \u0939\u0948 \u0928",
+            "standardized_term": "When dealing with advanced topics"
+        },
+        {
+            "original_term": "\u0906\u0909\u091f\u092a\u0941\u091f \u092e\u0947\u0902 \u0939\u092e\u093e\u0930\u0947 \u092a\u093e\u0938 \u0915\u094d\u092f\u093e \u0939\u094b\u0924\u093e \u0939\u0948 \u090f\u0915 Q \u0939\u094b\u0924\u093e \u0939\u0948 \u0914\u0930 \u0926\u0942\u0938\u0930\u093e \u0915\u094d\u092f\u093e \u0939\u094b\u0924\u093e \u0939\u0948 Q bar",
+            "standardized_term": "The outputs are Q and Q-bar"
+        },
+        {
+            "original_term": "compliment \u0939\u0948 \u0924\u094b \u0926\u0942\u0938\u0930\u0940 obviously complimented \u0906\u090f\u0917\u0940",
+            "standardized_term": "If one is uncomplimented, the other will be complimented"
+        },
+        {
+            "original_term": "\u0915\u094b\u0908 \u092b\u0930\u0915 \u0928\u0939\u0940\u0902 \u092a\u0921\u093c\u0924\u093e",
+            "standardized_term": "It does not matter"
+        }
+    ],
+    "dependencies": [
+        {
+            "source": "Digital Electronics",
+            "target": "NAND Gate"
+        },
+        {
+            "source": "Digital Electronics",
+            "target": "Sequential Circuits"
+        },
+        {
+            "source": "NAND Gate",
+            "target": "Truth Table (NAND Gate)"
+        },
+        {
+            "source": "Truth Table (NAND Gate)",
+            "target": "NAND Gate Property (One Input Zero)"
+        },
+        {
+            "source": "Sequential Circuits",
+            "target": "Next State (in Sequential Circuits)"
+        },
+        {
+            "source": "Sequential Circuits",
+            "target": "Present State / Past Output"
+        },
+        {
+            "source": "Sequential Circuits",
+            "target": "SR Latch (NAND Gate Implementation)"
+        },
+        {
+            "source": "NAND Gate Property (One Input Zero)",
+            "target": "SR Latch (NAND Gate Implementation)"
+        },
+        {
+            "source": "SR Latch (NAND Gate Implementation)",
+            "target": "Truth Table (SR Latch)"
+        },
+        {
+            "source": "Truth Table (SR Latch)",
+            "target": "Hold State (Memory State)"
+        },
+        {
+            "source": "Truth Table (SR Latch)",
+            "target": "Invalid State (Race Condition)"
+        },
+        {
+            "source": "SR Latch (NAND Gate Implementation)",
+            "target": "Flip-Flops"
+        },
+        {
+            "source": "Flip-Flops",
+            "target": "Counters"
+        }
+    ]
+}
