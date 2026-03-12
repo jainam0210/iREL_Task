@@ -1,0 +1,16 @@
+# Environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data and Media (Ignore heavy files, but keep the folder structure)
+data/audio/*
+data/input_transcripts/*
+!data/input_transcripts/.gitkeep
+data/output_graphs/*
+!data/output_graphs/.gitkeep

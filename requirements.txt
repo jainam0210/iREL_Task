@@ -1,0 +1,26 @@
+# ── Phase 1 NLP Pipeline — Python dependencies ────────────────────────────
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# System pre-requisites (install separately):
+#   sudo apt install ffmpeg          # required by yt-dlp for audio conversion
+#   # OR on macOS: brew install ffmpeg
+
+# Module 1 — Data Ingestion
+yt-dlp>=2024.1.1                 # YouTube audio downloader
+
+# Module 2 — Transcription
+faster-whisper>=1.0.0            # CTranslate2-backed Whisper; fast CPU/GPU inference
+
+# Module 3 — Pedagogy Extraction
+google-genai>=1.0.0              # Gemini API client (structured output / JSON mode)
+
+# Module 4 — DAG Visualization
+networkx>=3.2.0                  # graph modeling and DAG validation
+matplotlib>=3.8.0                # plot rendering and PNG export
+
+# Transitive / runtime helpers (pinned for reproducibility)
+ctranslate2>=4.0.0               # backend engine for faster-whisper
+huggingface-hub>=0.20.0          # model weight downloads
+tokenizers>=0.15.0               # fast Rust tokenizer used by faster-whisper
