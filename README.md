@@ -319,6 +319,9 @@ pip install -r requirements.txt
 
 ### API key
 
+Create a .env and enter you Gemini Api Key in the format
+GEMINI_API_KEY="your_key_here"
+
 ```bash
 export GEMINI_API_KEY="your_key_here"
 
