@@ -1,6 +1,6 @@
 # Code-Mixed Pedagogical Flow Extractor
 
-> **Name:** Jainam Modi &nbsp;|&nbsp; **Roll No.:** 2024101057
+> **Name:** Jainam Modi &nbsp;
 
 An end-to-end NLP pipeline that ingests Hindi-English (*Hinglish*) computer-science
 lecture videos from YouTube, transcribes them, extracts their pedagogical structure
